@@ -4,6 +4,9 @@ use App\Http\Controllers\CategoryController;
 use Illuminate\Support\Facades\Route;
 
 use App\Http\Controllers\ProductController;
+Route::get('/', function () {
+    return redirect('/products');
+});
 
 Route::get('/categories', [CategoryController::class, 'index']);
 Route::post('/categories', [CategoryController::class, 'store']);
